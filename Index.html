@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="all">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StopWatch</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <div class="container">
+        <div class="timer">
+            <div class="timer__block">
+                <div class="time hour">00</div>
+                <div class="title">HOURS</div>
+                <div class="bg"></div>
+            </div>
+            <div class="timer__block">
+                <div class="time minute">00</div>
+                <div class="title">MINUTES</div>
+                <div class="bg"></div>
+            </div>
+            <div class="timer__block">
+                <div class="time second">00</div>
+                <div class="title">SECONDS</div>
+                <div class="bg"></div>
+            </div>
+            <div class="timer__block">
+                <div class="time msecond">00</div>
+                <div class="title">MILLISECONDS</div>
+            </div>
+        </div>
+
+        <div class="buttons">
+            <button class="button start">START</button>
+            <button class="button pause">PAUSE</button>
+            <button class="button stop">STOP</button>
+            <button class="button round">ROUND</button>
+        </div>
+    </div>
+
+    <div class="result__block">
+        <div class="result__title">RESULTS</div>
+        <div class="result"></div>
+    </div>
+
+
+    <script src="main.js"></script>
+</body>
+</html>

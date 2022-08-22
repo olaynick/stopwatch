@@ -1,0 +1,112 @@
+* {
+    box-sizing: border-box;
+    font-family: Kdam Thmor Pro, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: rgb(68, 139, 255);
+}
+
+.container {
+    width: 50%;
+    height: 100%;
+    margin: 0 auto;
+    margin-top: 150px;
+}
+.timer{
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &__block {
+        width: 150px;
+        .time {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 95px;
+        }
+        .title {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: rgb(39, 82, 151);
+            background: rgba(39, 82, 151, 0.333);
+            border-radius: 5px;
+            padding: 2px 0;
+        }
+    }
+}
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .button{
+        position: relative;
+        cursor: pointer;
+        color: white;
+        background-color: rgba(39, 82, 151, 0.5);
+        padding: 10px;
+        border-radius: 5px;
+        border: none;
+        width: 150px;
+        font-size: 18px;
+        transition: .3s ease-in-out;
+        &::after{
+            content: "";
+            width: 140px;
+            height: 3px;
+            border-radius: 25px;
+            background-color: rgb(39, 82, 151);
+            bottom: 0;
+            left: 5px;
+            bottom: 0;
+            transition: .1s ease-in-out;
+        }
+        &:hover::after{
+            position: absolute;
+            transition: .1s ease-in-out;
+            bottom: -5px; 
+            display: block;
+        }
+        &:hover{
+            color: rgba(255, 255, 255, 0.9);
+            transition: .3s ease-in-out;
+            background-color: rgb(39, 82, 151);
+        }
+    }
+    .round {
+        &:disabled{
+            cursor: default;
+            background: rgba(103, 114, 133, 0.5);
+            &:not(.disabled):hover::after{
+                display: none;
+            }
+        }
+    }
+}
+.result__block{
+    position: absolute;
+    left: 15px;
+    bottom: 15px;
+    width: 250px;
+    color: rgba(255, 255, 255, 0.3);
+    .result {
+        position: relative;
+        font-size: 14px;
+        margin-bottom: 5px;
+        div::after{
+            content: "";
+            position: absolute;
+            display: block;
+            width: 30px;
+            height: 1px;
+            border-radius: 5px;
+            background-color: rgba(255, 255, 255, 0.3);
+        }
+    }
+
+}
